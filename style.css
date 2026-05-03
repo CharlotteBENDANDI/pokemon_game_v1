@@ -1,0 +1,268 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: impact;
+}
+
+/******************CONTENEUR****************************/
+
+.box{
+    height: 23vh;
+    width: 30%;
+    background-color: rgb(185, 232, 252);
+    border-radius: 25px;
+    overflow: hidden;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 8px 8px 45px rgb(111, 111, 111);
+    text-align: center;
+}
+
+/******************CONTENEUR FIN****************************/
+
+.box_end > img{
+    height: 30%;
+    width: 30%;
+}
+
+.box_end > input{
+    display: none;
+}
+
+/******************SETTINGS****************************/
+
+.centrer{
+	display: flex;
+	justify-content: center;    
+	align-items: center;  
+}
+
+.top{
+    height:20%;
+    width:100%;
+    margin: 0;
+    background-color: rgb(26, 63, 115);
+}
+
+.reponse{
+    height: 80%;
+    width: 100%;
+    /*padding-top: 1vh;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+}
+
+#question, button{
+    color:white;
+}
+
+#message{
+    min-height: 20px;
+}
+
+input[type=text] {
+  width: 60%;
+  height: 20%;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.box_start img{
+    display: none;
+}
+
+.aligner{
+    width: 100%;
+}
+
+/******************BOUTON****************************/
+
+.box_start button{
+  width: 30%;
+  height: 30px;
+  /*margin: 10px 0;*/
+  box-sizing: border-box;
+  background-color: rgb(26, 63, 115);
+  border: none;
+  border-radius: 25px;
+  transition: 0.25s ease-in-out;
+}
+
+.box_end button{
+  width: 30%;
+  height: 30px;
+  /*margin: 10px 0;*/
+  box-sizing: border-box;
+  background-color: rgb(26, 63, 115);
+  border: none;
+  border-radius: 25px;
+  transition: 0.25s ease-in-out;
+}
+
+button:hover{
+    background-color: white;
+    color: rgb(26, 63, 115);
+}
+
+/******************MENU QUESTIONS****************************/
+
+/*:root{
+    --hauteur-menu: 60px;
+}*/
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    width: 200px;
+    height: 100%;
+    background-color: rgb(26, 63, 115);
+    margin: 15px;
+    padding: 5px;
+}
+
+li img{
+    height: 16px;
+    margin: 2px;
+    transition: transform 0.2s ease;
+}
+
+li img:hover{
+    transform: scale(1.2);
+}
+
+nav{
+    width: 100%;
+    position: sticky;
+    border-radius: 10px;
+    box-shadow: 8px 8px 45px rgb(111, 111, 111);
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: column;
+    /*height: var(--hauteur-menu);*/
+    /*height: 80px;*/
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav > ul > li{
+    /*background-color: green;*/
+    padding: 8px;
+    position: relative;
+    width: 100%;
+    height: 550px;
+    flex: 1;
+}
+
+li { /******si problème on enlève*****/
+    overflow: hidden;
+}
+
+/*nav > ul > li > a{
+    position: absolute;
+}*/
+
+li a{
+    text-decoration: none;
+    color: white;
+}
+
+.deroulant > a:after{
+    content: ">";
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.sous-menu{
+    /*margin-top: var(--hauteur-menu);*/
+    width: 100%;
+    /*background-color: pink;*/
+    border-radius: 0px 0px 5px 5px;
+    overflow: hidden;
+    max-height: none;
+    /*height: 600px;*/
+    /*margin-top: 6px;*/
+    max-height: 0;
+    transition: max-height 0.4s ease;
+}
+
+.sous-menu > li > a{
+    align-items: center;
+    display: flex;
+    padding-left: 10px;
+}
+
+.sous-menu img {
+    opacity: 0;
+    transform: scale(1.2);
+   
+}
+
+.deroulant:hover .sous-menu img {
+    opacity: 1;
+    transition: opacity 1s ease, transform 1s ease;
+    transform: scale(1);
+}
+
+/*.sous-menu > li > a{
+    display: flex;
+}*/
+
+@keyframes rotationfleche{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+.deroulant:hover > a:after{
+    animation: rotationfleche 0.2s linear forwards;
+}
+
+.deroulant:hover > .sous-menu {
+    max-height: 500px;
+    padding: 10px;
+
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu_questions > ul > li{
+    border-bottom: 2px solid black;
+}
+
+.menu_questions > ul > li:last-child{
+    border-bottom: none;
+}
+
+/*@keyframes apparitionSousMenu{
+    0%{
+        box-shadow: 10px;
+        max-height: 0px;
+        height: 0;
+    }
+    30%{
+        box-shadow: 10px;
+    }
+    100%{
+        max-height: 500px;
+        box-shadow: 10px;
+    }
+}
+
+.deroulant:hover > .sous-menu{
+    animation: apparitionSousMenu 1s forwards;
+}*/
