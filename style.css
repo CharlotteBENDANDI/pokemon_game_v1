@@ -82,6 +82,10 @@ input[type=text] {
 
 /******************BOUTON****************************/
 
+button{
+    cursor: pointer;
+}
+
 .box_start button{
   width: 30%;
   height: 30px;
@@ -90,7 +94,7 @@ input[type=text] {
   background-color: rgb(26, 63, 115);
   border: none;
   border-radius: 25px;
-  transition: 0.25s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .box_end button{
@@ -101,12 +105,17 @@ input[type=text] {
   background-color: rgb(26, 63, 115);
   border: none;
   border-radius: 25px;
-  transition: 0.25s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 button:hover{
-    background-color: white;
+    background-color: white; 
     color: rgb(26, 63, 115);
+}
+
+.reponse button{
+    text-decoration: none;
+    /*color: rgb(26, 63, 115);*/
 }
 
 /******************MENU QUESTIONS****************************/
@@ -205,7 +214,6 @@ li a{
 .sous-menu img {
     opacity: 0;
     transform: scale(1.2);
-   
 }
 
 .deroulant:hover .sous-menu img {
